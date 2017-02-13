@@ -1,0 +1,270 @@
+/*theme color F5F5F5, 3C88C4*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*Bootstrap default override*/
+.form-control {
+    border-radius: 0;
+}
+
+.input-group-addon {
+    border-radius: 0;
+}
+
+select {
+    border-radius:0;
+    outline:0;
+}
+select::-ms-expand { /* for IE 11 */
+    display: none;
+}
+
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+
+.btn, .btn-group-lg>.btn, .btn-lg {
+    border-radius: 0;
+    border: 0;
+}
+
+.nav-tabs {
+    border: 0;
+    padding: 25px;
+}
+
+.nav-tabs>li>a {
+    border: 0;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #555;
+    cursor: default;
+    background-color: #F5F5F5;
+    border: 0; 
+    border-bottom: 5px solid #3C88C4;
+    font-weight: bold;
+    color: #3C88C4;
+}
+
+.nav>li {
+    width: 50%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+  background: none;  
+}
+
+.input-group-addon {
+  background: none;
+  color: #3C88C4;
+}
+
+.slider-handle {}
+
+.btn-default {
+  background-color: #3C88C4;
+  color: #fff;
+}
+
+.btn.focus, .btn:focus, .btn:hover {
+  background-color: #3C88E4;
+  color: #fff;
+}
+
+.typeahead.dropdown-menu {
+  width: 340px;
+}
+
+.slider-selection, .slider-track {
+  background: #fff;
+}
+
+/*user defined style*/
+
+body {
+  background: #F5F5F5;
+}
+
+hr {
+  border-color: #ccc;
+}
+
+#search-form {
+    padding: 25px;
+}
+
+#search-form .form-group:last-child {
+  text-align: right;
+}
+
+#return-date-wrapper {
+	display: none;
+}
+
+.left-side-bar {
+  border-right: 1px solid #ccc;
+  margin: 25px 0;
+  padding-bottom: 50px;
+}
+
+
+.filter-container {
+  text-align: center;
+}
+
+.filter-wrapper span:first-child {
+  padding: 0 30px;
+}
+
+.price-header {
+  padding: 0 10px;  
+}
+
+.price {
+  text-align: center;
+}
+
+.price-header:before, .price:before {
+  content: '₹';
+}
+
+#search-results span{
+  display: block;
+  text-align: center;
+}
+
+#search-results div.wrap span{
+  display: inline;
+  
+}
+
+.glyphicon-plane {
+  color: #3C88C4; 
+}
+
+#search-highlight {
+
+}
+
+
+#flight-abbr, #flight-dates {
+  text-align: center;
+  padding: 10px 0;
+}
+
+#flight-abbr h3 {
+  color: #3C88C4;  
+}
+
+
+#search-results{
+  margin-top: 20px;
+}
+
+#swap-city {
+  padding: 0 20px;
+}
+
+.flight-card {
+  position: relative;
+  margin: 10px;
+  -webkit-box-shadow: 0 1px 7px 0 rgba(120, 120, 120, 0.50);
+  box-shadow: 0 1px 7px 0 rgba(120, 120, 120, 0.50);
+  border: 1px solid #ccc;
+  padding: 25px;  
+  background: #fff;
+}
+
+.flight-card div {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.flight-card div span:first-child {
+  font-size: 14px;
+}
+
+#error-alert {
+  width: 50%;
+  margin-top: 20px;
+  position: fixed;
+  text-align: center;
+  left: 25%;
+  display: none;
+  z-index: 9999;
+  font-weight: bolder;
+}
+
+#header-container {
+  background: #3C88C4;
+}
+
+#header-container{
+  color: #fff;
+  background: #3C88C4;
+  padding: 10px 20px;
+  margin-bottom: 25px;
+}
+
+/*Riboon generated from http://www.cssportal.com/*/
+.ribbon {
+  position: absolute;
+  left: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+}
+.ribbon span {
+  font-size: 8px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#3C88C4 0%, #1E5799 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; left: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #1E5799;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #1E5799;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #1E5799;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #1E5799;
+}
+
+#booking-modal .booking-type {
+  text-transform: capitalize;
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  
+}

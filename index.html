@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+ 	<head>
+    <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <META name="Author" content="Praveen Jeganathan">    
+    <title>Flight Search Engine</title>    
+ 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+ 		<link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
+    <link rel="stylesheet" type="text/css" href="css/typeahead.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+ 	</head>
+  	<body>
+      
+      <div class="center-block alert alert-danger" id="error-alert" role="alert"></div>
+
+      <div class="container-fluid" id="header-container">
+          <h2>Flight Search Engine</h2>
+      </div>
+      
+      <div class="container-fluid">
+      <div class="row">        
+        <div class="col-lg-4 col-sm-4 col-md-4 left-side-bar">
+          <ul class="nav nav-tabs" id="trip-type">
+            <li class="active"><a data-trip-type="one" data-toggle="tab">One Way <i class="fa"></i></a></li>
+            <li><a data-trip-type="return" data-toggle="tab">Return<i class="fa"></i></a></li>
+        </ul>
+          <form id="search-form"> 
+            <div class="form-group">
+              <input id="origin" autocomplete="off" class="form-control" type="text" placeholder="Enter Origin City" />
+          </div>
+          <div class="form-group">
+            <input id="destination" autocomplete="off" class="form-control" type="text" placeholder="Enter Destination City" />
+          </div>
+          <div class="form-group">
+            <div id="departure-date-wrapper" class="input-group date">
+              <input type="text" id="departure-date" class="form-control" placeholder="Enter Depature Date"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+            </div>
+          </div>      
+          <div class="form-group">
+            <div id="return-date-wrapper" class="input-group date">
+              <input id="return-date" type="text" class="form-control" placeholder="Enter Return Date"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+            </div>          
+          </div>
+          <div class="form-group">
+            <select id="passengers" class="form-control">
+              <option value="1" default>1 Passenger</option>
+              <option value="2">2 Passengers</option>
+              <option value="3">3 Passengers</option>
+              <option value="4">4 Passengers</option>
+              <option value="5">5 Passengers</option>        
+            </select>
+          </div>
+          <div class="form-group">
+            <select class="form-control">
+              <option default>Economy</option>
+              <option>First Class</option>
+              <option>Business</option>
+            </select>
+          </div>
+
+
+            <div class="form-group">
+              <button data-trip-type="one" type="button" id="submit-request" class="btn btn-default">Submit</button>
+            </div>
+          </form>          
+          <hr>
+          
+          <div class="filter-wrapper">
+            <span>Filter by price: </span>
+            <br><br>
+            <div class="filter-container">
+              <b class="price-header" id="min-price"></b>
+              <input id="price-range" type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> 
+              <b class="price-header" id="max-price"></b>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search Results -->
+        <div class="col-lg-8 col-sm-8 col-md-8">
+          <div class="row search-highlight">
+              <div class="col-md-6" id="flight-abbr">
+                <h3 style="text-align: left; padding: 0px 25px;">List of Flights Available</h3>
+              </div>
+              <div class="col-md-6" id="flight-dates"></div>
+          </div> 
+          <div id="search-results"></div>
+      </div>
+    </div>
+    </div>
+
+
+    <!-- Modal Window-->
+    <div id="booking-modal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <div>Trip Type: <span class="booking-type"></span><h3 class="price" style="float:right"></h3></div>            
+            <div class="booking-body"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  		<script src="libs/jquery-1.12.3.min.js"></script>      
+  		<script src="libs/bootstrap.min.js"></script>   
+      <script src="libs/bootstrap-slider.min.js"></script> 
+      <script src="libs/typeahead.jquery.js"></script>      
+  		<script src="libs/bootstrap-datepicker.min.js"></script>  		
+      <script src="js/utils.js"></script>
+      <script src="js/config.js"></script>      
+  		<script src="js/app.js"></script>
+  	</body>
+</html>
